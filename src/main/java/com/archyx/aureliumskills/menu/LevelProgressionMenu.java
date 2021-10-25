@@ -66,7 +66,7 @@ public class LevelProgressionMenu implements InventoryProvider {
 		contents.set(skillItem.getPos(), ClickableItem.empty(skillItem.getItem(skill, playerData, player, locale)));
 
 		BackItem backItem = (BackItem) options.getItem(ItemType.BACK);
-		contents.set(backItem.getPos(), ClickableItem.of(backItem.getItem(player, locale), e -> SkillsMenu.getInventory(player, plugin).open(player)));
+		contents.set(backItem.getPos(), ClickableItem.of(backItem.getItem(player, locale), e -> player.performCommand("/cp test")));
 
 		CloseItem closeItem = (CloseItem) options.getItem(ItemType.CLOSE);
 		contents.set(closeItem.getPos(), ClickableItem.of(closeItem.getItem(player, locale), e -> player.closeInventory()));
